@@ -1,0 +1,18 @@
+<!-- journal/templates/journal/entry_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Journal Entries</title>
+</head>
+<body>
+    <h1>My Journal Entries</h1>
+    {% for entry in entries %}
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.content }}</p>
+        <p>Mood: {{ entry.mood }}</p>
+        <hr>
+    {% empty %}
+        <p>No journal entries yet.</p>
+    {% endfor %}
+</body>
+</html>

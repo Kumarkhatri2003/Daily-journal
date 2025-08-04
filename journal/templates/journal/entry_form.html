@@ -1,0 +1,16 @@
+<!-- journal/templates/journal/entry_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Journal Entry</title>
+</head>
+<body>
+    <h1>Add New Entry</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'entry_list' %}">Back to entries</a>
+</body>
+</html>
