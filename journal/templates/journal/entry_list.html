@@ -16,7 +16,8 @@
                 {% for entry in entries %}
                     <a href="{% url 'entry_details' entry.pk %}" class="list-group-item list-group-item-action">
                         <h5 class="mb-1">{{ entry.title }}</h5>
-                        <small class="text-muted">Mood: {{ entry.mood }}</small>
+                        <small class="text-muted">Mood: {{ entry.mood }}</small> <br>
+                         <small class="text-muted">Date: {{ entry.created_at }}</small>
                     </a>
                 {% endfor %}
             </div>

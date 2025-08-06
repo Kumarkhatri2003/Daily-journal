@@ -11,10 +11,10 @@
         <h1 class="mb-3">{{ entry.title }}</h1>
         <p><strong>Mood:</strong> {{ entry.mood }}</p>
         <hr>
-        <p><strong>Entry:</strong></p>
+        <p><strong>Details:</strong></p>
         <p>{{ entry.content }}</p>
         <hr>
-        <p><strong>Date:</strong> {{ entry.date_created }}</p>
+        <p><strong>Date:</strong> {{ entry.created_at }}</p>
 
         <a href="{% url 'entry_list' %}" class="btn btn-link">&larr; Back to all entries</a>
     </div>
